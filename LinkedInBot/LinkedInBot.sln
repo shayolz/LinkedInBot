@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedInBot", "LinkedInBot.csproj", "{D55D05E6-455B-404C-B096-FAEFB52DD19E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedInBot", "LinkedInBot.csproj", "{D55D05E6-455B-404C-B096-FAEFB52DD19E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedInBot.Domain", "..\LinkedInBot.Domain\LinkedInBot.Domain.csproj", "{6835F04F-5033-4315-921F-BE05CEF93E1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedInBot.Domain", "..\LinkedInBot.Domain\LinkedInBot.Domain.csproj", "{6835F04F-5033-4315-921F-BE05CEF93E1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedInBot.Services", "..\LinkedInBot.Services\LinkedInBot.Services.csproj", "{0B4C4183-234C-4AEA-84EF-E5019C8106D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedInBot.Services", "..\LinkedInBot.Services\LinkedInBot.Services.csproj", "{0B4C4183-234C-4AEA-84EF-E5019C8106D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedInBot.Tests", "..\LinkedInBot.Tests\LinkedInBot.Tests.csproj", "{E855B6D0-D5BD-4142-83D1-1AE5B0184FD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedInBot.Tests", "..\LinkedInBot.Tests\LinkedInBot.Tests.csproj", "{E855B6D0-D5BD-4142-83D1-1AE5B0184FD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedInBot.Utils", "..\LinkedInBot.Utils\LinkedInBot.Utils.csproj", "{6734ECF4-FD04-4E1A-8876-F01490627F22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedInBot.Utils", "..\LinkedInBot.Utils\LinkedInBot.Utils.csproj", "{6734ECF4-FD04-4E1A-8876-F01490627F22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedInBot.AI", "..\LinkedInBot.AI\LinkedInBot.AI.csproj", "{904C7294-BEC2-4A9A-83BB-E34E3467C8EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{6734ECF4-FD04-4E1A-8876-F01490627F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6734ECF4-FD04-4E1A-8876-F01490627F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6734ECF4-FD04-4E1A-8876-F01490627F22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{904C7294-BEC2-4A9A-83BB-E34E3467C8EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{904C7294-BEC2-4A9A-83BB-E34E3467C8EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{904C7294-BEC2-4A9A-83BB-E34E3467C8EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{904C7294-BEC2-4A9A-83BB-E34E3467C8EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

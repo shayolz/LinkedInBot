@@ -1,4 +1,5 @@
 ﻿using LinkedInBot.Domain;
+using LinkedInBot.Services;
 using System;
 
 namespace LinkedInBot.AI
@@ -7,46 +8,24 @@ namespace LinkedInBot.AI
     {
         private readonly LinkedinLogin _login;
         private readonly AppSettings _config;
+        private readonly BehaviourService _behaviourService;
 
-        public BrainAI(LinkedinLogin login, AppSettings config)
+        public BrainAI(LinkedinLogin login, AppSettings config, BehaviourService behaviourService)
         {
             _login = login;
             _config = config;
+            _behaviourService = behaviourService;
         }
 
-        public void Start()
-        {
-            //TODO: something to do on start? maybe start selenium bot here and do some checks
-        }
 
-        public void UserLogin()
+        public void Run()
         {
-            throw new NotImplementedException();
-        }
+            if (string.IsNullOrWhiteSpace(_login.Name) || string.IsNullOrWhiteSpace(_login.Password) || string.IsNullOrWhiteSpace(_login.Username))
+            {
+                throw new InvalidOperationException("Account is not correctly configured on appsettings.json. Name, username or password is missing.");
+            }
 
-        public void UserLogout()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GotToLinkedInHome()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GoToPersonalProfile()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GoToPersonalMessages()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GoToSearchPeople()
-        {
-            throw new NotImplementedException();
+            _behaviourService.Login(_login);
         }
     }
 }

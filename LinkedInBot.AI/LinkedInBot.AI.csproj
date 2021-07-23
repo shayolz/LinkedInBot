@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LinkedInBot.Domain\LinkedInBot.Domain.csproj" />
+    <ProjectReference Include="..\LinkedInBot.Services\LinkedInBot.Services.csproj" />
   </ItemGroup>
 
 </Project>

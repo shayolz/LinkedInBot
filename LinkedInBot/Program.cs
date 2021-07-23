@@ -1,4 +1,5 @@
-﻿using LinkedInBot.Domain;
+﻿using LinkedInBot.AI;
+using LinkedInBot.Domain;
 using LinkedInBot.Services;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -26,8 +27,10 @@ namespace LinkedInBot
 
         static void RunBotAsync(LinkedinLogin login, AppSettings config)
         {
-            LinkedinBotService IgBot = new LinkedinBotService(login, config);
-            IgBot.Run();
+            var actionService = new ActionService(config);
+            var behaviourService = new BehaviourService(actionService, config);
+            var LinkedInBot = new BrainAI(login, config, behaviourService);
+            LinkedInBot.Run();
         }
 
    

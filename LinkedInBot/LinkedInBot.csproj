@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LinkedInBot.AI\LinkedInBot.AI.csproj" />
     <ProjectReference Include="..\LinkedInBot.Domain\LinkedInBot.Domain.csproj" />
     <ProjectReference Include="..\LinkedInBot.Services\LinkedInBot.Services.csproj" />
     <ProjectReference Include="..\LinkedInBot.Utils\LinkedInBot.Utils.csproj" />

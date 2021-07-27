@@ -5,7 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NLog" Version="4.7.10" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="92.0.4515.4300" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LinkedInBot.Domain\LinkedInBot.Domain.csproj" />
+    <ProjectReference Include="..\LinkedInBot.Selenium\LinkedInBot.Selenium.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="chromedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

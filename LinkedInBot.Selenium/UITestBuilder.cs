@@ -140,8 +140,11 @@ namespace Selenium
         {
             ChromeOptions options = new ChromeOptions();
 
-            if (_hideInfoBar)
+            if (_hideInfoBar) {
                 options.AddArgument("--disable-infobars");
+                options.AddExcludedArgument("--enable-automation");
+                options.AddAdditionalCapability("useAutomationExtension", false);
+            }
 
             if (_hideBrowser)
                 options.AddArgument("--headless");
@@ -175,7 +178,6 @@ namespace Selenium
             options.AddArgument("no-sandbox");
             options.AddArgument("--no-sandbox");
             options.AddArgument("--disable-setuid-sandbox");
-
             var driver = new ChromeDriver(ChromeDriverService.CreateDefaultService(), options, TimeSpan.FromMinutes(3));
 
 

@@ -32,7 +32,7 @@ namespace LinkedInBot.AI
             _behaviourService.Initialize();
             await _behaviourService.LoginAsync(_login);
             _login.Name = _behaviourService.GetUserName();
-            _behaviourService.SetCurrentUser(_login.Name);
+            _behaviourService.SetCurrentUser(_login);
 
             if (string.IsNullOrWhiteSpace(_login.Name))
             {
@@ -43,7 +43,7 @@ namespace LinkedInBot.AI
             {
                 try
                 {
-                    var nextBehaviour = this.GetNextBehaviour();
+                    var nextBehaviour = GetNextBehaviour();
                     if(nextBehaviour != NextAction.NO_CONNECTION && nextBehaviour != NextAction.TIME_TO_SLEEP)
                     {
                         await _behaviourService.CheckIfIsLoggedInAsync(_login);
@@ -51,8 +51,8 @@ namespace LinkedInBot.AI
 
                     await _behaviourService.HandleNextAsync(nextBehaviour);
 
-                    // wait some seconds after every Behaviour
-                    await Task.Delay(120000);
+                    await _behaviourService.GoToSafeZone();
+                    await Task.Delay(_config.WaitTimeAfterEveryBehaviour * 1000);
                 }
                 catch (Exception ex)
                 {

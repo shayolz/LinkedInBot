@@ -9,6 +9,6 @@ namespace LinkedInBot.Domain
     public class AppSettings
     {
         public List<LinkedinLogin> Accounts { get; set; }
-
+        public int WaitTimeAfterEveryBehaviour { get; set; }
     }
 }

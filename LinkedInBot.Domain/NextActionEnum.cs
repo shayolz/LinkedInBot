@@ -11,6 +11,8 @@
         SEARCHING_JOB,
         READ_MESSAGES,
         ADD_COMPETENCES_TO_USER,
-        LOGIN
+        LOGIN,
+        ACCEPT_INVITATIONS,
+        ADD_NEW_FOLLOW_PAGE
     }
 }
